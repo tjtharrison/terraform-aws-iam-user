@@ -19,4 +19,3 @@ The SES credentials are output, encrypted with the pgp key provided - An example
 ```
 terraform output --json aws_access_key | jq -r .encrypted_ses_smtp_password_v4 | base64 -d | gpg -d
 ```
-
