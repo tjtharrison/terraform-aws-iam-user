@@ -19,10 +19,6 @@ jobs:
       with:
         path: .
 
-    - name: Run Checkov action
-      id: checkov
-      uses: bridgecrewio/checkov-action@master
-
     - name: Render terraform docs and push changes back to PR
       uses: terraform-docs/gh-actions@main
       with:
@@ -30,6 +26,10 @@ jobs:
         output-file: README.md
         output-method: inject
         git-push: "true"
+
+    - name: Run Checkov action
+      id: checkov
+      uses: bridgecrewio/checkov-action@master
 
     - uses: actions/labeler@v4
       with:
