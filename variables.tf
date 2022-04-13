@@ -27,7 +27,7 @@ variable "ssh_public_key" {
 
 variable "tags" {
   description = "Additional tags to add to the resources"
-  default = {}
+  default     = {}
 }
 
 variable "user_email" {
