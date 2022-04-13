@@ -49,8 +49,9 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_enable_access_key"></a> [enable\_access\_key](#input\_enable\_access\_key) | Create access key to attach to the user | `bool` | `false` | no |
-| <a name="input_gpg_pub_key"></a> [gpg\_pub\_key](#input\_gpg\_pub\_key) | n/a | `any` | n/a | yes |
+| <a name="input_gpg_pub_key"></a> [gpg\_pub\_key](#input\_gpg\_pub\_key) | Base64 encoded gpg string (See README.md for more information) | `string` | n/a | yes |
 | <a name="input_groups_to_join"></a> [groups\_to\_join](#input\_groups\_to\_join) | List of groups for the user to join | `list(string)` | `[]` | no |
+| <a name="input_permissions_boundary_arn"></a> [permissions\_boundary\_arn](#input\_permissions\_boundary\_arn) | The ARN of the permission boundary to assign to the user | `any` | `null` | no |
 | <a name="input_ssh_public_key"></a> [ssh\_public\_key](#input\_ssh\_public\_key) | Public SSH key for the user | `string` | `null` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Additional tags to add to the resources | `map` | `{}` | no |
 | <a name="input_user_email"></a> [user\_email](#input\_user\_email) | Email address to assign to the user account | `any` | n/a | yes |

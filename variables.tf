@@ -4,8 +4,8 @@ variable "user_name" {
 
 variable "gpg_pub_key" {
   description = "Base64 encoded gpg string (See README.md for more information)"
-  sensitive = true
-  type = string
+  sensitive   = true
+  type        = string
 }
 
 variable "enable_access_key" {
@@ -38,5 +38,5 @@ variable "user_email" {
 
 variable "permissions_boundary_arn" {
   description = "The ARN of the permission boundary to assign to the user"
-  default = null
+  default     = null
 }
