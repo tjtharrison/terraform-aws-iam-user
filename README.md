@@ -4,20 +4,19 @@ Terraform module for IAM user with optional access key, this module does not per
 
 # PGP Encryption key
 
-This module requires access to a base64 encoded GPG key. This can be generated as follows (MacOS):
+This module requires access to a base64 encoded public GPG key. This can be generated as follows (MacOS):
 
 ```
+gpg --list-secret-keys ## To list keys
 gpg --export [your-key-id] | base64
 ```
 
-This should be treated as a password and stored securely (Eg in Secrets Manager)
+# Getting IAM password
 
-# SES Credentials
-
-The SES credentials are output, encrypted with the pgp key provided - An example of decrypting these would be to extract from terraform output, before decoding and decrypting:
+Using the `./example` directory, running terraform apply will create the user and output the password (base64 encoded and encrypted with the gpg key). To get the IAM password, simply decode and decrypt using base64 and gpg:
 
 ```
-terraform output --json aws_access_key | jq -r .encrypted_ses_smtp_password_v4 | base64 -d | gpg -d
+echo [output from module] | base64 -d | gpg -d
 ```
 
 <!-- BEGIN_TF_DOCS -->
