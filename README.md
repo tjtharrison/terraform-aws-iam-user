@@ -41,6 +41,7 @@ No modules.
 | [aws_iam_access_key.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_access_key) | resource |
 | [aws_iam_user.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user) | resource |
 | [aws_iam_user_group_membership.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user_group_membership) | resource |
+| [aws_iam_user_login_profile.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user_login_profile) | resource |
 | [aws_iam_user_ssh_key.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user_ssh_key) | resource |
 
 ## Inputs
@@ -62,4 +63,5 @@ No modules.
 |------|-------------|
 | <a name="output_aws_access_key"></a> [aws\_access\_key](#output\_aws\_access\_key) | n/a |
 | <a name="output_iam_user"></a> [iam\_user](#output\_iam\_user) | n/a |
+| <a name="output_password"></a> [password](#output\_password) | n/a |
 <!-- END_TF_DOCS -->
