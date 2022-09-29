@@ -7,3 +7,7 @@ output "iam_user" {
   sensitive = true
   value     = aws_iam_user.this
 }
+
+output "password" {
+  value = aws_iam_user_login_profile.this.encrypted_password
+}
