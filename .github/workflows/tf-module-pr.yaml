@@ -27,14 +27,6 @@ jobs:
         output-method: inject
         git-push: "true"
 
-    - name: Run Checkov action
-      id: checkov
-      uses: bridgecrewio/checkov-action@master
-
-    - uses: actions/labeler@v4
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
-
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Labelled and updated docs
