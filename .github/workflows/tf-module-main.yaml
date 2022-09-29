@@ -18,7 +18,7 @@ jobs:
       - run: |
           sudo apt-get install jq npm -y
 
-          pr_number=$(git log --pretty=oneline | grep "Merge" | head -1 | awk '{print $NF}' | sed 's/#//g;s/)//g;s/(//g'
+          pr_number=$(git log --pretty=oneline | grep "Merge" | head -1 | awk '{print $NF}' | sed 's/#//g;s/)//g;s/(//g')
 
           bump_type=$(curl -s "https://api.github.com/repos/$GITHUB_REPOSITORY/issues/$pr_number" | jq -r '.labels[].name')
 
